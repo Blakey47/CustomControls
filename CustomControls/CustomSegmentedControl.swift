@@ -12,6 +12,7 @@ import UIKit
 @IBDesignable
 
 class CustomSegmentedControl: UIView {
+    var buttons = [UIButton]()
 
     @IBInspectable
     var borderWidth: CGFloat = 0 {
@@ -28,14 +29,42 @@ class CustomSegmentedControl: UIView {
     }
     
     @IBInspectable
-    var commaSeperatedButtonTitles: String = "" {
+    var commaSeparatedButtonTitles: String = "" {
+        didSet {
+            updateView()
+        }
+    }
+    
+    @IBInspectable
+    var textColor: UIColor = .lightGray {
         didSet {
             updateView()
         }
     }
     
     func updateView() {
+        buttons.removeAll()
+        subviews.forEach {$0.removeFromSuperview()}
         
+        let buttonTitles = commaSeparatedButtonTitles.components(separatedBy: ",")
+        
+        for buttonTitle in buttonTitles {
+            let button = UIButton(type: .system)
+            button.setTitle(buttonTitle, for: .normal)
+            button.setTitleColor(textColor, for: .normal)
+            buttons.append(button)
+        }
+        
+        let sv = UIStackView(arrangedSubviews: buttons)
+        sv.axis = .horizontal
+        sv.alignment = .fill
+        sv.distribution = .fillEqually
+        addSubview(sv)
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        sv.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        sv.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        sv.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
     }
     
     override func draw(_ rect: CGRect) {
