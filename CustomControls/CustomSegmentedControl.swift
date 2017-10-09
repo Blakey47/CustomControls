@@ -8,14 +8,38 @@
 
 import UIKit
 
+// Allows you to see your changes right on the Storyboard
+@IBDesignable
+
 class CustomSegmentedControl: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBInspectable
+    var borderWidth: CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
     }
-    */
+    
+    @IBInspectable
+    var borderColor: UIColor = UIColor.clear {
+        didSet {
+            layer.borderColor = borderColor.cgColor
+        }
+    }
+    
+    @IBInspectable
+    var commaSeperatedButtonTitles: String = "" {
+        didSet {
+            updateView()
+        }
+    }
+    
+    func updateView() {
+        
+    }
+    
+    override func draw(_ rect: CGRect) {
+        layer.cornerRadius = frame.height / 2
+    }
 
 }
