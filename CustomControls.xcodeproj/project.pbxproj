@@ -12,6 +12,7 @@
 		A7711B171F8BD77300E122F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7711B151F8BD77300E122F6 /* Main.storyboard */; };
 		A7711B191F8BD77300E122F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7711B181F8BD77300E122F6 /* Assets.xcassets */; };
 		A7711B1C1F8BD77300E122F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7711B1A1F8BD77300E122F6 /* LaunchScreen.storyboard */; };
+		A7711B241F8BFABC00E122F6 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7711B231F8BFABC00E122F6 /* CustomSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A7711B181F8BD77300E122F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7711B1B1F8BD77300E122F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7711B1D1F8BD77300E122F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7711B231F8BFABC00E122F6 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				A7711B111F8BD77300E122F6 /* AppDelegate.swift */,
 				A7711B131F8BD77300E122F6 /* ViewController.swift */,
+				A7711B231F8BFABC00E122F6 /* CustomSegmentedControl.swift */,
 				A7711B151F8BD77300E122F6 /* Main.storyboard */,
 				A7711B181F8BD77300E122F6 /* Assets.xcassets */,
 				A7711B1A1F8BD77300E122F6 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				A7711B141F8BD77300E122F6 /* ViewController.swift in Sources */,
 				A7711B121F8BD77300E122F6 /* AppDelegate.swift in Sources */,
+				A7711B241F8BFABC00E122F6 /* CustomSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
